@@ -1,0 +1,45 @@
+{
+  "name": "@nkduy/syntax",
+  "version": "0.10.1-alpha.0",
+  "description": "A beautiful Syntax Highlighter.",
+  "author": "NKDuy",
+  "homepage": "https://github.com/khanhduy1407/syntax/tree/master/packages/syntax",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "unpkg": "dist/index.unpkg.iife.js",
+  "jsdelivr": "dist/index.jsdelivr.iife.js",
+  "keywords": [
+    "nkd-syntax",
+    "syntax-highlighter",
+    "highlighter"
+  ],
+  "files": [
+    "dist",
+    "languages",
+    "themes",
+    "samples"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "rollup -c",
+    "watch": "rollup -c -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khanhduy1407/syntax.git"
+  },
+  "dependencies": {
+    "jsonc-parser": "^3.0.0",
+    "vscode-oniguruma": "^1.6.1",
+    "vscode-textmate": "5.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.17.7"
+  },
+  "browser": {
+    "fs": false,
+    "path": false
+  }
+}

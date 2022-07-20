@@ -1,0 +1,60 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "lerna run build --include-dependencies",
+    "watch": "lerna run watch --parallel",
+    "fmt": "prettier --write packages/**/*.ts",
+    "test": "cross-env NODE_OPTIONS=--max-old-space-size=4096 jest --colors",
+    "gen": "yarn workspace syntax-site gen",
+    "release": "lerna publish",
+    "update": "npm run update:themes && npm run update:grammars",
+    "update:themes": "bash ./scripts/pullThemes.sh",
+    "update:grammars": "bash ./scripts/pullGrammars.sh"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,json,yml}": [
+      "prettier --write"
+    ],
+    "*.ts": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@rollup/plugin-replace": "^3.0.0",
+    "@types/fs-extra": "^9.0.12",
+    "@types/jest": "^26.0.24",
+    "@types/js-yaml": "^4.0.2",
+    "@types/node": "^14.17.7",
+    "@types/unzipper": "^0.10.4",
+    "chalk": "^4.1.2",
+    "cross-env": "^7.0.3",
+    "esno": "^0.5.0",
+    "fast-plist": "^0.1.2",
+    "fs-extra": "^9.0.12",
+    "jest": "^26.6.3",
+    "jsonc-parser": "^3.0.0",
+    "lerna": "^3.22.1",
+    "lint-staged": "^10.5.4",
+    "lodash.kebabcase": "^4.1.1",
+    "prettier": "^2.3.2",
+    "rollup": "^2.55.1",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-dts": "^3.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "ts-jest": "^26.5.6",
+    "tsup": "^4.12.5",
+    "typescript": "^4.3.5",
+    "unzipper": "^0.10.11",
+    "yorkie": "^2.0.0"
+  },
+  "license": "MIT"
+}

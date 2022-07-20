@@ -1,0 +1,4 @@
+# Ignore as they are auto generated
+
+packages/syntax/src/languages.ts
+packages/syntax/src/themes.ts
