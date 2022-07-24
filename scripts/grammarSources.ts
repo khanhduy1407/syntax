@@ -59,6 +59,9 @@ export const vscodeGrammarsToRename = {
 export const githubGrammarSources: (string | [string, string])[] = [
   'https://github.com/prisma-labs/vscode-graphql/blob/master/grammars/graphql.json',
   ['haml', 'https://github.com/karuna/haml-vscode/blob/master/syntaxes/haml.json'],
+  'https://github.com/kdujs/ketur/blob/master/syntaxes/kdu-generated.json',
+  'https://github.com/kdujs/ketur/blob/master/syntaxes/kdu-html.tmLanguage.json',
+  'https://github.com/kdujs/ketur/blob/master/syntaxes/kdu-postcss.json',
   'https://github.com/James-Yu/LaTeX-Workshop/blob/master/syntax/TeX.tmLanguage.json',
   'https://github.com/James-Yu/LaTeX-Workshop/blob/master/syntax/LaTeX.tmLanguage.json',
   'https://github.com/TheRealSyler/vscode-sass-indented/blob/master/syntaxes/sass.tmLanguage.json',
